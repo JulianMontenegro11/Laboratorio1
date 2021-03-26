@@ -21,6 +21,8 @@ int main(){
         int R;
         int fila;
         int columna;
+        int contador1;
+        int total;
         case 1:
 
 
@@ -201,22 +203,58 @@ int main(){
             fila=1;
             while (fila<=50) {
                 columna=1;
-                while (columna<3){
+                while (columna<=3){
                     if(columna==1){
                         cout<<fila;
-                        columna++;
-                    }
-                    else{
-                        cout<<51-fila;
-                        cout<<endl;
 
                     }
+                    else {
+                        if(columna==2){
+                            cout<<"  ";
+                         }
+                        else{
+                            cout<<51-fila;
+                            cout<<endl;
+                        }
+
+                    }
+                  columna++;
+
 
 
                 }
                 fila++;
               }
             break;
+
+
+        case 15:
+            break;
+
+
+        case 16:
+            cout<<"Este programa solicita constente numeros al usuario, cualdo el usuario ingresa el numero 0 el programa nos entrega el promedio de todos los numeros ingresados"<<endl;
+            cout<<endl;
+
+            contador1=0;
+            X=0;
+            total=0;
+            while(X==0){
+                cout<<"Ingrese un numero (si ingresa el numero 0 el programa parara)"<<endl;
+                cin>>N;
+                if(N!=0){
+                    total=total+N;
+                    contador1++;
+                }
+                else{
+                    X++;
+                }
+
+            }
+            cout<<"El promedio es:"<<total/contador1<<endl;
+
+            break;
+
 
     }
 }
