@@ -1,0 +1,141 @@
+	Ejercicio 1
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A,B;
+    cout << "ingrese A y B :";
+
+    cin >> A >> B;
+
+    cout<< "El residuo de A/B es :"<< A%B << endl;
+}
+
+
+----------------------------------------------------------------------
+
+Ejercicio 2
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int N;
+    cout << "ingrese un numero:";
+    cin >> N;
+
+    if (N%2 == 0){
+        cout << "El numero es par";
+        cout << endl;
+    }
+
+    else{
+        cout << "El numero es impar";
+        cout << endl;
+    }
+}
+
+------------------------------------------------------------------
+
+
+Ejercicio 3
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int A,B;
+    cout << "ingrese os numeros A y B:";
+    cin >> A;
+    cin >> B;
+
+   if (A < B){
+       cout << B << " es mayor" << endl;
+   }
+
+   else{
+       cout << A <<" es mayor" << endl;
+   }
+
+}
+
+
+-------------------------------------------------------------------
+ejercicio 28
+             cout << "Ingrese el valor de n: ";
+             cin >> n;
+             for(int i=1; i<=n; i++) pi+=(2.0*(i%2)-1)/(2*i-1);
+             cout << "La aproximacion de pi con n=" << n << " es " << 4*pi << endl;
+
+--------------------------------------------------------------------
+
+
+
+problema 11
+            cout << "Ingrese un numero n= ";
+            cin >> n;
+            for(int i=1;band2;i++){
+                mul=n*i;
+                band=true;
+                for(int j=n-1;band;j--){
+                    if(mul%j!=0) band=false;
+                    if(j==1){
+                        band=false;
+                        band2=false;
+                    }
+                }
+            }
+            cout << "El minimo comun multiplo de todos losn enteros entre 1 y " << n << " es: " << mul
+-------------------------------------------------------------------
+ejercicio 30
+
+srand(time(NULL));
+            A1 = rand() % 100 + 0;
+            do{
+                count += 1;
+                cout <<"Ingrese un numero"<< endl;
+                cin >> B1;
+                if(A1 > B1){cout << "A es mayor!\n";}
+                else if(A1 <B1){cout << "A es menor!\n";}
+                else{cout << "Es igual, el numero es:" << B1 << "\nSus intentos son:" << count << endl;}
+            }
+            while(A1 != B1);
+--------------------------------------------------------------------------
+
+
+Problema 3 
+
+
+
+
+ cout << "Ingrese mesy luego dia: ";
+        cin >> mes >> dia;
+        if(dia>=1 && dia<=31 && mes>=1 && mes<=12){
+            if(mes==2){
+                if(dia<=28) cout << "Fecha valida!" <<endl;
+                else if(dia == 29) cout << "Fecha valida en bisiesto!" <<endl;
+                else cout << "Fecha invalida! " << endl;
+            }
+            else if(mes<=7){
+                if(mes%2==1) cout << "Fecha valida!" <<endl;
+                else if(dia<=30)  cout << "Fecha vali
+else if(mes<=7){
+                if(mes%2==1) cout << "Fecha valida!" <<endl;
+                else if(dia<=30)  cout << "Fecha valida!" <<endl;
+                else cout << "Fecha invalida! " << endl;
+            }
+            else{
+                if(mes%2==0) cout << "Fecha valida!" <<endl;
+                else if(dia<=30)  cout << "Fecha valida!" <<endl;
+                else cout << "Fecha invalida! " << endl;
+            }
+        }
+        else cout << "Fecha invalida! " << endl;
