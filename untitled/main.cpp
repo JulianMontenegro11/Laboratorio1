@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <cstdlib>
 using namespace std;
 
 int main(){
@@ -22,8 +23,12 @@ int main(){
         int fila;
         int columna;
         int contador1;
-        int total;
+        float total;
         case 1:
+        int horas;
+        int minutos;
+        int segundos;
+        int pi;
 
 
             cout << "este programa devuelve e residuo de una division";
@@ -228,10 +233,6 @@ int main(){
             break;
 
 
-        case 15:
-            break;
-
-
         case 16:
             cout<<"Este programa solicita constente numeros al usuario, cualdo el usuario ingresa el numero 0 el programa nos entrega el promedio de todos los numeros ingresados"<<endl;
             cout<<endl;
@@ -255,6 +256,176 @@ int main(){
 
             break;
 
+
+
+
+        case 18:
+            cout<<"Este programa solicita un numero al usuario y nos indica si es el numero es un cuadrado perfecto"<<endl;
+            cout<<"Ingrese el numero N"<<endl;
+            cin>>N;
+            contador1=1;
+            while(contador1<=N){
+                A=contador1*contador1;
+                if(A==N){
+                    A=N;
+                    cout<<N<<"  es un cuadrado perfecto"<<endl;
+
+                }
+                else{
+                    if(contador1==N){
+                        if(A!=N){
+                            cout<<N << " No es en cuadrado perfecto"<< endl;
+                        }
+
+                    }
+                }
+                contador1++;
+
+            }
+
+
+
+            break;
+
+
+
+
+
+
+        case 20:
+            cout<<"Este programa solicita un numero N al usuario y le indica si es un numero polindromo"<<endl;
+            cout<<"Ingrese numero N"<<endl;
+            cin>>N;
+
+            if(N>100){
+                A=N/100;
+                C=N%10;
+                if(A==C){
+                    cout<<N<< " Es un numero palindromo"<<endl;
+                }
+
+                else{
+                    cout<<N << " No es un numero palindromo"<<endl;
+                }
+            }
+
+
+
+            break;
+
+
+
+        case 22:
+
+            cout<<"Este programa solicita al usuario un cantidad entera de segundo y el programa estrega este tiempo en formato de horas, minutos y segundos"<<endl;
+            cout<<"Ingrese cantidad de segundos"<<endl;
+            cin>>N;
+            horas=0;
+            minutos=0;
+            segundos=0;
+            X=0;
+            A=0;
+            if(horas==0){
+                 minutos=N/60;
+                 horas=minutos/60;
+                 A=horas*60;
+                 X=minutos*60;
+                 segundos=N-X;
+                }
+            if(segundos<=60){
+                minutos=minutos-A;
+            }
+
+            cout<<"El tiempo es:  "<<horas<<":"<<minutos<<":"<<segundos<<endl;
+
+
+
+            break;
+
+
+
+        case 24:
+
+            cout<<"Este programa realiza un cuadrodo con el caracter '+' con la longitud de sus lados igual al numero N ingresado por el usuario "<<endl;
+            cout<<"Ingrese numero N"<<endl;
+            cin>>N;
+            for (fila=1;fila<=N;fila=fila+1){
+                for(columna=1;columna<=N;columna=columna+1){
+                    if(columna==1 || fila==1){
+                        cout<<"+";
+                    }
+                    else{
+                        if(columna==N || fila==N){
+                            cout<<"+";
+                        }
+                        else{
+                            cout<<" ";
+
+                    }
+                   }
+                }
+
+
+                cout<<endl;
+            }
+            break;
+
+
+
+
+        case 26:
+            cout<<"Este programa indica que tipo de triangulo forman tres longitudes que ingresa el usuario"<<endl;
+            cout<<"Ingrese los lados A,B,C"<<endl;
+            cin>>A;
+            cin>>B;
+            cin>>C;
+            if(A+B>C){
+                if(A+C>B){
+                    if(B+C>A){
+                        if(A==B && A==C && B==C){
+                            cout<<"Las tres longitudes ingresadas forman un triangulo equilatero"<<endl;
+                        }
+                        else{
+                            if(A!=B && A!=C && B!=C){
+                                cout<<"Las tres longitudes ingresadas forman un triangulo escaleno"<<endl;
+                            }
+                            else{
+                                cout<<"Las tres longitudes ingresadas forman un triango isosceles"<<endl;
+
+                            }
+
+
+                        }
+                    }
+                }
+            }
+
+
+            break;
+
+
+        case 28:
+
+            cout << "Ingrese el valor de N: ";
+            cin >> N;
+            for(int i=1; i<=N; i++) pi+=(2.0*(i%2)-1)/(2*i-1);
+            cout << "La aproximacion de pi con n=" << N << " es " << 4*pi << endl;
+            break;
+
+
+       case 30:
+            srand((NULL));
+                        A = rand() % 100 + 0;
+                        do{
+                            contador1= 1;
+                            cout <<"Ingrese un numero"<< endl;
+                            cin >> B;
+                            if(A > B){cout << "A es mayor!\n";}
+                            else if(A <B){cout << "A es menor!\n";}
+                            else{cout << "Es igual, el numero es:" << B << "\nSus intentos son:" << contador1 << endl;}
+                        }
+                        while(A != B);
+            break;
 
     }
 }
